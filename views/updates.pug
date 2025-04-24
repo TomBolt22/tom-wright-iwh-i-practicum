@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Update Pet
+        a(href="/").back-link Return to the homepage
+        form(action="/update-cobj" method="post")
+            div.form__field
+                label(for="name") Name
+                input(type="text" id="name" name="name" required)
+            div.form__field
+                label(for="age") Age
+                input(type="text" id="age" name="age")
+            div.form__field
+                label(for="type") Type
+                input(type="text" id="type" name="type")
+            div.form__field
+                button(type="submit") Update Record
